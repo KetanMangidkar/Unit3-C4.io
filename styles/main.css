@@ -1,0 +1,25 @@
+#container{
+    display: flex;
+  }
+  #sidebar{
+    flex: 2;
+  }
+  #sidebar>input{
+    border: 3px solid black;
+  }
+  #sidebar>div{
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  #main{
+    flex: 8;
+  }
+  #index-div{
+    display: flex;
+  }
+  #main img{
+    width: 100%;
+    height: 300px;
+
+  }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!--DO NOT CHANGE THIS ID's-->
+
+    <div id="container">
+      <div id="sidebar">
+        <!--add your sidebar component here-->
+      </div>
+
+      <div id="main">
+        <!--DO NOT CHANGE THIS ID's-->
+        <!--Show the clicked article in detailed format here ONLY-->
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let clicked_image = JSON.parse(localStorage.getItem("clicked_image"));
+  let arr = [];
+  arr.push(clicked_image);
+  console.log(arr);
+  showData(arr);
+
+  function showData(arr){
+    arr.forEach(el =>{
+      let container = document.getElementById("main");
+
+      let title = document.createElement("h3");
+      title.innerText = el.title;
+
+      let img = document.createElement("img");
+      img.src = el.urlToImage;
+
+      let dis = document.createElement("p");
+      dis.innerText = el.description;
+      
+      
+      container.append(title,img,dis);
+    })
+  }
+
+</script>
+
